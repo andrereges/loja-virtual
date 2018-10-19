@@ -11,10 +11,13 @@ DB_PASSWORD=
 
 Rodar esses comandos
 
-php artisan serve --port=8000
-php artisan storage:link
-php artisan migrate
-php artisan db:seed
+1 php artisan serve --port=8000
+
+2 php artisan storage:link
+
+3 php artisan migrate 
+
+4 php artisan db:seed
 
 Usuários criados automaticamente
 
