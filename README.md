@@ -11,6 +11,8 @@ DB_PASSWORD=
 
 Rodar esses comandos
 
+0 npm install
+
 1 php artisan serve --port=8000
 
 2 php artisan storage:link
