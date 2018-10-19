@@ -209,7 +209,7 @@ class CarrinhoController extends Controller
 
         $request->session()->flash('mensagem-sucesso', 'Compra concluída com sucesso!');
 
-        return redirect()->route('carrinho.index');
+        return redirect()->route('carrinho.pedidos');
     }
 
     public function pedidos()
