@@ -19,8 +19,8 @@ class CreatePedidoProdutosTable extends Migration
             $table->integer('produto_id')->unsigned();
             $table->enum('status', ['RESERVADO', 'PAGO', 'CANCELADO']);
             $table->decimal('valor', 6, 2)->default(0);
-            $table->foreign('pedido_id')->references('id')->on('pedidos')->onDelete('cascade');
-            $table->foreign('produto_id')->references('id')->on('produtos')->onDelete('cascade');
+            $table->foreign('pedido_id')->references('id')->on('pedidos');
+            $table->foreign('produto_id')->references('id')->on('produtos');
             $table->timestamps();
         });
     }

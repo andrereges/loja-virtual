@@ -24,11 +24,21 @@
                 </div>
                 <div class="col-md-12">
                     <hr>
+                    <h4 class="card-title"><strong>Categorias</strong></h4>
+
+                    @foreach ($registro->categorias()->get() as $categoria)
+                    <p class="card-text"><li>{{ $categoria->nome }}</li></p>
+                    @endforeach
+
+                </div>
+                <div class="col-md-12">
+                    <hr>
                     <h4 class="card-title"><strong>Características</strong></h4>
+
                     @foreach ($registro->caracteristicas()->get() as $caracteristica)
-                    <p class="card-text"><strong>{{ $caracteristica->nome }}: </strong>{{ $caracteristica->pivot->valor }}</p>
-  
-                    @endforeach                    
+                    <p class="card-text"><li><strong>{{ $caracteristica->nome }}: </strong>{{ $caracteristica->pivot->valor }}</li></p>
+                    @endforeach
+                                        
                 </div>
           </div>
         </div>
